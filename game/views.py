@@ -3,6 +3,10 @@ from .models import Question
 from .forms import AnswerInputForm
 
 
+def select(request):
+    return render(request, 'game/select.html')
+
+
 def hangman(request):
     pass
 
