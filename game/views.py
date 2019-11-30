@@ -1,3 +1,9 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def hangman(request):
+    pass
+
+
+def quiz(request):
+    pass
