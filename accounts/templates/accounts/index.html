@@ -41,27 +41,45 @@
                 font-size: 3.5rem;
             }
         }
+
+        a:active{ text-decoration: none;}
+        a:visited{ text-decoration: none;}
+        a:hover{ text-decoration: none;}
+        a{ text-decoration: none;}
+
+        body{
+            background-color: #f5f5f5;
+        }
+        .container{
+            width : 330px;
+            text-align: center;
+            margin-top : 100px;
+        }
     </style>
     <!-- Custom styles for this template -->
     <link href="signin.css" rel="stylesheet">
 </head>
 
 <body class="text-center">
-    <form class="form-signin">
-        <img class="mb-4" src="/docs/4.4/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-        <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-        <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-        <div class="checkbox mb-3">
-            <label>
-                <input type="checkbox" value="remember-me"> Remember me
-            </label>
-        </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-        <p class="mt-5 mb-3 text-muted">&copy; 2017-2019</p>
-    </form>
+    <div class="container">
+        <form class="form-signin">
+            <img class="mb-4" src="https://getbootstrap.com/docs/4.4/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+            <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+            <label for="inputEmail" class="sr-only">Email address</label>
+            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+            <div class="checkbox mb-3">
+                <label>
+                    <input type="checkbox" class="mt-3" value="remember-me"> Remember me
+                </label>
+            </div>
+            <a href=""><span class="btn btn-block mt-3" style="background-color : #563d7c; color:#fff;"><img src="https://getbootstrap.com/docs/4.4/assets/brand/bootstrap-solid.svg" width="22px;" style="float:left;">일반 로그인</span></a>
+            <a href=""><span class="btn btn-block mt-1" style="background-color : #DC4A38; color:#fff;; "><img src="https://bit.ly/2q4tG67" width="22px;" style="float:left;">Google 로그인</span></a>
+            <p class="mt-5 mb-3 text-muted">&copy; 2017-2019</p>
+        </form>
+    </div>
+
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
