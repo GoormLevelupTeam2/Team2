@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path,include
 import accounts.views
 
 urlpatterns = [
@@ -9,4 +9,5 @@ urlpatterns = [
     # accounts app url
     path('accounts/', include('allauth.urls')),
 
+    path('game/', include('game.urls')),
 ]
