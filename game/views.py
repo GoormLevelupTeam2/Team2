@@ -32,4 +32,3 @@ def quiz(request, pk):
         'form': form,
         'correct': correct,
     })
->>>>>>> game
