@@ -33,13 +33,37 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
+    'django.contrib.sites', # 소셜 로그인 추가
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'accounts',
+    # accounts app
+    'accounts.apps.AccountsConfig',
+    # django-allauth
+    'allauth', 
+    'allauth.account', # 가입한 계정 관리
+    'allauth.socialaccount', # 소셜 계정으로 가입한 계정 관리
+    'allauth.socialaccount.providers.google', # google
+    # game app
     'game',
 ]
+
+# social login
+AUTHENTICATION_BACKENDS = (
+    #Needed to login by username in Django admin, regardless of 'allauth'
+    'django.contrib.auth.backends.ModelBackend',
+    
+    # 'allauth' specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
+
+SITE_ID = 1
+LOGIN_REDIRECT_URL = '/' # 로그인 후 호출되는 url
+
+NAVER_CLIENT_ID = 'OQFu8JnSrGn_Ss95XAJk'
+NAVER_SECRET_KEY = 'CDUy4QsBBQ'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
